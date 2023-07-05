@@ -16,9 +16,13 @@ There are two parts to this project:
 
 1.  Microcontoller Side:  The microcontroller side utilizes the popular "AccelStepper" library to control a stepper driver/motor.  The AccelStepper library functions are effectively abstracted over a USB Serial interface.  A serial handshaking protocol is used to pass commands to the microcontroller (Arduino, ESP32, etc).  Both blocking and non-blocking functions are supported.  Basically, all "AccelStepper" functions are implemented and supported by passing serial commands directly over the usb interface with the appropriate number of parameters.  The Microcontroller side is simply used to objectify the library and once uploaded, very little ongoing maintenance should be required in order to maintain the microcontroller side as projects are added or updated on the PC Side.  (IOW: Functional logic can be entirely implemented/maintained on the PC side)  The microcontroller side should be largely static unless changes are required to support additional updates to the AccelStepper Library.
 
+* Note that the Microcontroller (Arduino/ESP32) Side requires the AccelStepper Library: https://www.airspayce.com/mikem/arduino/AccelStepper/
+
 2.  PC Side: The PC side exposes the "AccelStepper" function calls over the USB Serial Interface.  The actual function call is implemented as the first field in the serial command with additional fields provided for each of the required function parameters.  This effectively allows AccelStepper library functions to be directly called from a PC Application.  
 
 Once the Microcontroller code (USBStepperCtl.ino)is compiled and uploaded (to Arduino, ESP32, etc) then the PC Side (AutoIT) can be used to control the associated stepper.  Example code is provided using the AutoIT development environment (free).  (AutoIT excels in the simplicity of user interface creation, scripts can be compiled into standalone executables, and the development environment is freely available). The following example code fully implements the command construction and handshaking as required to implement the associated protocol.
+
+* Note that the PC (Autoit Side) requires the "ComUDF" Function Library:  https://www.autoitscript.com/forum/topic/189190-serial-port-udf-com-port-udf/
 
 PC (AutoIT) Examples:
 
