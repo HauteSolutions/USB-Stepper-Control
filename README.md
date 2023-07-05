@@ -18,11 +18,11 @@ There are two parts to this project:
 
 * Note that the Microcontroller (Arduino/ESP32) Side requires the AccelStepper Library: https://www.airspayce.com/mikem/arduino/AccelStepper/
 
-2.  PC Side: The PC side exposes the "AccelStepper" function calls over the USB Serial Interface.  The actual function call is implemented as the first field in the serial command with additional fields provided for each of the required function parameters.  This effectively allows AccelStepper library functions to be directly called from a PC Application.  
-
-Once the Microcontroller code (USBStepperCtl.ino)is compiled and uploaded (to Arduino, ESP32, etc) then the PC Side (AutoIT) can be used to control the associated stepper.  Example code is provided using the AutoIT development environment (free).  (AutoIT excels in the simplicity of user interface creation, scripts can be compiled into standalone executables, and the development environment is freely available). The following example code fully implements the command construction and handshaking as required to implement the associated protocol.
+2.  PC Side: The PC side exposes the "AccelStepper" function calls over the USB Serial Interface.  The actual function call is implemented as the first field in the serial command with additional fields provided for each of the required function parameters.  This effectively allows AccelStepper library functions to be directly called from a PC Application.
 
 * Note that the PC (Autoit Side) requires the "ComUDF" Function Library:  https://www.autoitscript.com/forum/topic/189190-serial-port-udf-com-port-udf/
+
+Once the Microcontroller code (USBStepperCtl.ino)is compiled and uploaded (to Arduino, ESP32, etc) then the PC Side (AutoIT) can be used to control the associated stepper.  Example code is provided using the AutoIT development environment (free).  (AutoIT excels in the simplicity of user interface creation, scripts can be compiled into standalone executables, and the development environment is freely available). The following example code fully implements the command construction and handshaking as required to implement the associated protocol.
 
 PC (AutoIT) Examples:
 
