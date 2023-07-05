@@ -38,7 +38,7 @@ This project consists of the following components:
 
 - 3D Print File (STL) to create the Pen Wheel (in 4 quadrants): Pen_Wheel_Quarter.stl
 - Acrylic Cut File (DXF) to create the foundation to which the Pen Wheel Quadrants are mounted: Pen_Wheel_Foundation.dxf
-- 3D Print Files (STL) to create the Enclosure which holds the print wheel and ALL its components (Stepper, Driver, ESP32 Controller, Cooling Fan): Enclosure_Bottom.stl, Enclosure_Top.stl
+- 3D Print Files (STL) to create the Enclosure which holds the print wheel and ALL its components (Stepper, Driver, ESP32 Controller, Cooling Fan): Combined_Enclosure_Bottom.stl, Combined_Enclosure_Top.stl
 
 ...and if you would like to "split" the stepper motor from the control unit, here is another set of files.  The stepper "control" housing can then be used with ANY stepper (i.e. Rotary Chuck) which uses a standard 4-connector GX-16 aviation connector:
 
@@ -57,7 +57,7 @@ Parts List (about $65)
 - Fan Cover ($2): https://www.amazon.com/dp/B00E1LAWHA
 - (For "split" housing) GX-16 Stepper Connector ($2): https://www.amazon.com/gp/product/B07D3DC1PD
 
-A wiring Schematic for the "combined" enclosure is provided.
+A wiring Schematic for the "combined" enclosure is provided: Controller_Schematic.jpg
 
 Photos of the various components (combined and seperate) are also provided
 
